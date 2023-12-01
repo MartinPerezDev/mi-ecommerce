@@ -1,18 +1,14 @@
+import ItemListContainer from "./componentes/ItemListContainer"
+import NavBar from "./componentes/NavBar/NavBar";
+
 import "./App.css";
 
 function App() {
-  const saludo = "Hola Mundo";
-
-  const saludando = ()=>{
-    alert("Hiciste Click")
-  }
 
   return (
     <div id="app">
-      <img src="/img/react.png" alt="" />
-      <p>aasdasd</p>
-      <h1> {saludo} </h1>
-      <button onClick={ saludando }>Clickeame</button>
+      <NavBar />
+      <ItemListContainer saludo="Prop enviada desde App"/>
     </div>
   );
 }
