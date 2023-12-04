@@ -1,10 +1,12 @@
-import CartWidget from "./CartWidget"
-import "./NavBar.css"
+import CartWidget from "./CartWidget";
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <div id="navbar">
-      <h1>Nike</h1>
+      <div className="brand">
+        <img src="/img/sony-logo.svg" alt="logo sony" />
+      </div>
       <ul>
         <li>
           <a href="">Auriculares</a>
@@ -18,7 +20,7 @@ const NavBar = () => {
       </ul>
       <CartWidget />
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
