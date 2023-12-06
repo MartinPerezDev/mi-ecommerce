@@ -16,6 +16,7 @@ function App() {
       </ItemListContainer>
 
       <EjemploContador />
+      
       <ItemCount stock = {10} />
       <ItemCount stock = {20} />
     </div>
