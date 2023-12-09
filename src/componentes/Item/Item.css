@@ -1,0 +1,13 @@
+.item{
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 10px 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item .image{
+  height: 250px;
+}
