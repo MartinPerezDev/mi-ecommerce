@@ -1,14 +1,13 @@
-import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer"
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import NavBar from "./componentes/NavBar/NavBar";
 
 import "./App.css";
 
 function App() {
-
   return (
     <div id="app">
       <NavBar />
-      <ItemListContainer saludo="Prop enviada desde App" />
+      <ItemListContainer saludo="Bienvenidos a Sony" />
     </div>
   );
 }

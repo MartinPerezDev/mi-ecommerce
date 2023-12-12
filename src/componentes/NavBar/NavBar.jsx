@@ -12,10 +12,10 @@ const NavBar = () => {
           <a href="">Auriculares</a>
         </li>
         <li>
-          <a href="">Teclados</a>
+          <a href="">Televisores</a>
         </li>
         <li>
-          <a href="">Pc</a>
+          <a href="">Camaras</a>
         </li>
       </ul>
       <CartWidget />
