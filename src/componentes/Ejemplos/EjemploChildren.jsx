@@ -1,7 +1,8 @@
-const EjemploChildren = () => {
+const EjemploChildren = ({ titulo, children }) => {
   return (
     <div>
-      <p>Soy el componente EjemploChildren</p>
+      <p>{titulo}</p>
+      <div>{children}</div>
     </div>
   )
 }
