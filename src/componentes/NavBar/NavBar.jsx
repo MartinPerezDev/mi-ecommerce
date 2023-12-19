@@ -1,21 +1,23 @@
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
+
 import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <div id="navbar">
-      <div className="brand">
+      <Link to="/" className="brand">
         <img src="/img/sony-logo.svg" alt="logo sony" />
-      </div>
+      </Link>
       <ul>
         <li>
-          <a href="">Auriculares</a>
+          <Link to="/categorias/auriculares">Auriculares</Link>
         </li>
         <li>
-          <a href="">Televisores</a>
+          <Link to="/categorias/televisores">Televisores</Link>
         </li>
         <li>
-          <a href="">Camaras</a>
+          <Link to="/categorias/camaras">Camaras</Link>
         </li>
       </ul>
       <CartWidget />

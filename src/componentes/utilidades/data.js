@@ -5,7 +5,8 @@ const productos = [
     descripcion: "Este es el mejor auricular del mundo",
     stock: 10,
     precio: 15000,
-    imagen: "/img/auriculares-WF-XB700.webp"
+    imagen: "/img/auriculares-WF-XB700.webp",
+    categoria: "auriculares"
   },
   {
     id: "ljm322",
@@ -13,7 +14,8 @@ const productos = [
     descripcion: "Este es el mejor teclado del mundo",
     stock: 2,
     precio: 12000,
-    imagen: "/img/auriculares-WH-CH720N.webp"
+    imagen: "/img/auriculares-WH-CH720N.webp",
+    categoria: "auriculares"
   },
   {
     id: "shx688",
@@ -21,7 +23,8 @@ const productos = [
     descripcion: "Este es el mejor teclado del mundo",
     stock: 6,
     precio: 17000,
-    imagen: "/img/auriculares-Float-Run.webp"
+    imagen: "/img/auriculares-Float-Run.webp",
+    categoria: "auriculares"
   },
   {
     id: "jht332",
@@ -29,7 +32,8 @@ const productos = [
     descripcion: "Este es el mejor televisor del mundo",
     stock: 9,
     precio: 120000,
-    imagen: "/img/televisores-A80J-Series.webp"
+    imagen: "/img/televisores-A80J-Series.webp",
+    categoria: "televisores"
   },
   {
     id: "wes236",
@@ -37,7 +41,8 @@ const productos = [
     descripcion: "Este es el mejor televisor del mundo",
     stock: 9,
     precio: 162000,
-    imagen: "/img/televisores-X725F-Series.webp"
+    imagen: "/img/televisores-X725F-Series.webp",
+    categoria: "televisores"
   },
   {
     id: "kmt866",
@@ -45,7 +50,8 @@ const productos = [
     descripcion: "Este es el mejor televisor del mundo",
     stock: 15,
     precio: 19900,
-    imagen: "/img/televisores-X805H-Series.webp"
+    imagen: "/img/televisores-X805H-Series.webp",
+    categoria: "televisores"
   },
   {
     id: "khg522",
@@ -53,7 +59,8 @@ const productos = [
     descripcion: "Esta es la mejor camara del mundo",
     stock: 3,
     precio: 22000,
-    imagen: "/img/camaras-ILCE-9M3.webp"
+    imagen: "/img/camaras-ILCE-9M3.webp",
+    categoria: "camaras"
   },
   {
     id: "prw092",
@@ -61,7 +68,8 @@ const productos = [
     descripcion: "Esta es la mejor camara del mundo",
     stock: 10,
     precio: 31000,
-    imagen: "/img/camaras-ILCE-6000L.webp"
+    imagen: "/img/camaras-ILCE-6000L.webp",
+    categoria: "camaras"
   },
   {
     id: "ujm422",
@@ -69,7 +77,8 @@ const productos = [
     descripcion: "Esta es la mejor camara del mundo",
     stock: 5,
     precio: 24000,
-    imagen: "/img/camaras-ZV-E10.webp"
+    imagen: "/img/camaras-ZV-E10.webp",
+    categoria: "camaras"
   },
 ];
 
