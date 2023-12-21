@@ -37,7 +37,7 @@ const ItemListContainer = ({ saludo }) => {
   return (
     <>
       {cargando ? (
-        <div style={{ display: "flex" , justifyContent: "center", alignItems: "center", height:"100vh" }}>
+        <div className="cargando">
           <MoonLoader color="black" />
         </div>
       ) : (

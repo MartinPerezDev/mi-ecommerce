@@ -1,10 +1,15 @@
+import "./ItemDetail.css";
+
 const ItemDetail = ({ producto }) => {
   return (
-    <div>
-      <img src={producto.imagen} alt="" />
-      <p>{producto.nombre}</p>
-      <p>${producto.precio}</p>
+    <div className="item-detail">
+      <img className="imagen" src={producto.imagen} alt={producto.nombre} />
+      <div className="texto">
+        <h2>{producto.nombre}</h2>
+        <p>{producto.descripcion}</p>
+        <p>${producto.precio}</p>
+      </div>
     </div>
-  )
-}
-export default ItemDetail
+  );
+};
+export default ItemDetail;
