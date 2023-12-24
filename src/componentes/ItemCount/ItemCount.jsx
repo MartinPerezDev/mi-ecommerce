@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./ItemCount.css";
 
-const ItemCount = ({ stock, agregarAlCarrito }) => {
+const ItemCount = ({ stock }) => {
   const [contador, setContador] = useState(1);
 
   const sumar = () => {
@@ -24,7 +24,7 @@ const ItemCount = ({ stock, agregarAlCarrito }) => {
         <p>{contador}</p>
         <button onClick={sumar}>+</button>
       </div>
-      <button onClick={ () => agregarAlCarrito(contador) } className="terminar"> Agregar al carrito </button>
+      <button className="terminar"> Agregar al carrito </button>
     </div>
   );
 };
