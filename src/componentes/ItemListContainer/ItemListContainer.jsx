@@ -9,29 +9,33 @@ import "./ItemListContainer.css";
 
 const ItemListContainer = ({ saludo }) => {
   const [productos, setProductos] = useState([]);
-  const [cargando, setCargando] = useState(true);
+  const [cargando, setCargando] = useState(false);
 
   const { categoria } = useParams();
 
   useEffect(() => {
-    setCargando(true)
-    obtenerProductos
-      .then((respuesta) => {
-        if (categoria) {
-          const productosFiltrados = respuesta.filter(
-            (producto) => producto.categoria === categoria
-          );
-          setProductos(productosFiltrados);
-        } else {
-          setProductos(respuesta);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setCargando(false);
-      });
+    
+    setProductos([
+      {
+        id: "hgt344",
+        nombre: "asdasdasdasd",
+        descripcion: "Este es el mejor auricular del mundo",
+        stock: 10,
+        precio: 15000,
+        imagen: "/img/auriculares-WF-XB700.webp",
+        categoria: "auriculares"
+      },
+      {
+        id: "ljm322",
+        nombre: "Auriculares WH CH720N",
+        descripcion: "Este es el mejor teclado del mundo",
+        stock: 2,
+        precio: 12000,
+        imagen: "/img/auriculares-WH-CH720N.webp",
+        categoria: "auriculares"
+      }
+    ])
+
   }, [categoria]);
 
   return (
