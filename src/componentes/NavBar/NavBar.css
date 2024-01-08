@@ -18,6 +18,7 @@
 }
 
 #navbar ul {
+  padding: 0 10px;
   height: 60px;
   display: flex;
 }
@@ -52,6 +53,7 @@
   align-items: center;
   color: white;
   margin: 0 40px;
+  text-decoration: none;
 }
 
 #cartwidget:hover{
