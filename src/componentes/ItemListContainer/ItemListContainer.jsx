@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-import obtenerProductos from "../utilidades/data";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { MoonLoader } from "react-spinners"
+import { MoonLoader } from "react-spinners";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import db from "../../db/db";
 
 import "./ItemListContainer.css";
 
@@ -15,23 +16,28 @@ const ItemListContainer = ({ saludo }) => {
 
   useEffect(() => {
     setCargando(true)
-    obtenerProductos
+
+    let consulta
+    const productosRef = collection(db, "productos");
+
+    if(categoria){
+      //filtrar data
+      consulta = query(productosRef, where("categoria", "==", categoria))
+    }else{
+      //traer toda la data
+      consulta = productosRef
+    }
+
+    getDocs(consulta)
       .then((respuesta) => {
-        if (categoria) {
-          const productosFiltrados = respuesta.filter(
-            (producto) => producto.categoria === categoria
-          );
-          setProductos(productosFiltrados);
-        } else {
-          setProductos(respuesta);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setCargando(false);
+      let productosDb = respuesta.docs.map((producto) => {
+        return { id: producto.id, ...producto.data() };
       });
+      setProductos(productosDb)
+    })
+    .catch((error)=> console.log(error))
+    .finally(()=> setCargando(false))
+
   }, [categoria]);
 
   return (
