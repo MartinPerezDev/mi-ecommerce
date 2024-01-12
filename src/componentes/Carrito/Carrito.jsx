@@ -47,6 +47,9 @@ const Carrito = () => {
         <p>Vaciar carrito</p>
         <FaTrashAlt size={25} />
       </div>
+      <Link to="/checkout">
+          Continuar con mi compra
+      </Link>
     </div>
   );
 };
