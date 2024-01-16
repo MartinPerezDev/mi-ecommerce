@@ -1,17 +1,38 @@
 const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
   return (
-    <form onSubmit={enviarOrder} >
+    <div>
+      <h2>Porfavor complete con sus datos para seguir con la compra</h2>
+      <form className="formulario" onSubmit={enviarOrder}>
         <label htmlFor="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" value={datosForm.nombre} onChange={guardarDatosInput} />
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          value={datosForm.nombre}
+          onChange={guardarDatosInput}
+        />
 
         <label htmlFor="telefono">Telefono</label>
-        <input type="text" id="telefono" name="telefono" value={datosForm.telefono} onChange={guardarDatosInput} />
+        <input
+          type="text"
+          id="telefono"
+          name="telefono"
+          value={datosForm.telefono}
+          onChange={guardarDatosInput}
+        />
 
         <label htmlFor="email">Email</label>
-        <input type="text" id="email" name="email" value={datosForm.email} onChange={guardarDatosInput} />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          value={datosForm.email}
+          onChange={guardarDatosInput}
+        />
 
         <button type="submit">Enviar orden</button>
       </form>
-  )
-}
-export default Form
+    </div>
+  );
+};
+export default Form;

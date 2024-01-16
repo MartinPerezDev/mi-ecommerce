@@ -43,12 +43,12 @@ const Carrito = () => {
         ))}
       </ul>
       <h3>Total a pagar: ${totalPrecio()}</h3>
-      <div className="borrar-todo" onClick={borrarCarrito}>
+      <div className="botones-carrito-borrar" onClick={borrarCarrito}>
         <p>Vaciar carrito</p>
         <FaTrashAlt size={25} />
       </div>
-      <Link to="/checkout">
-          Continuar con mi compra
+      <Link className="botones-carrito-continuar" to="/checkout">
+        <p>Continuar con la compra</p>
       </Link>
     </div>
   );

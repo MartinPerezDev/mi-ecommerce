@@ -4,6 +4,9 @@ import { CartContext } from "../../context/CartContext";
 import { addDoc, collection } from "firebase/firestore";
 import db from "../../db/db";
 
+import "./Checkout.css"
+import { Link } from "react-router-dom";
+
 const Checkout = () => {
   const [datosForm, setDatosForm] = useState({
     nombre: "",
@@ -38,11 +41,12 @@ const Checkout = () => {
   };
 
   return (
-    <div>
+    <div className="checkout">
       {idOrden ? (
-        <div>
+        <div className="orden">
           <h2>Orden Generada correctamente!!</h2>
           <p>N° de orden: {idOrden} </p>
+          <Link className="boton-orden" to="/">Ver mas productos</Link>
         </div>
       ) : (
         <Form
