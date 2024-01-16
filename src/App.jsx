@@ -5,9 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./componentes/Error/Error";
 import { CartProvider } from "./context/CartContext";
 import Carrito from "./componentes/Carrito/Carrito";
+import Checkout from "./componentes/Checkout/Checkout";
 
 import "./App.css";
-import Checkout from "./componentes/Checkout/Checkout";
 
 function App() {
   return (
@@ -16,11 +16,17 @@ function App() {
         <NavBar />
 
         <Routes>
-          <Route path="/" element={<ItemListContainer saludo="Bienvenidos a Sony" />} />
-          <Route path="/categorias/:categoria" element={<ItemListContainer saludo="Bienvenidos a Sony" />} />
+          <Route
+            path="/"
+            element={<ItemListContainer saludo="Bienvenidos a Sony" />}
+          />
+          <Route
+            path="/categorias/:categoria"
+            element={<ItemListContainer saludo="Bienvenidos a Sony" />}
+          />
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<Carrito />} />
-          <Route path="/checkout" element={ <Checkout /> } />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </CartProvider>

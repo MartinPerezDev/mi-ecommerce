@@ -14,7 +14,6 @@ const ItemDetailContainer = () => {
     const productoRef = doc(db, "productos", id);
     getDoc(productoRef).then((respuesta) => {
       const productoDb = { id: respuesta.id, ...respuesta.data() };
-      console.log(respuesta);
 
       if (!respuesta.exists()) {
         setProductoExiste(true);

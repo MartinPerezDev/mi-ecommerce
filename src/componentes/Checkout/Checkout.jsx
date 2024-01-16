@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
+
 import Form from "./Form";
 import { CartContext } from "../../context/CartContext";
 import { addDoc, collection } from "firebase/firestore";
 import db from "../../db/db";
+import { Link } from "react-router-dom";
 
 import "./Checkout.css"
-import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const [datosForm, setDatosForm] = useState({
