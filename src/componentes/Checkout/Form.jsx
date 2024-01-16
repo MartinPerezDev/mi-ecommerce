@@ -10,6 +10,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
           name="nombre"
           value={datosForm.nombre}
           onChange={guardarDatosInput}
+          required
         />
 
         <label htmlFor="telefono">Telefono</label>
@@ -19,15 +20,27 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
           name="telefono"
           value={datosForm.telefono}
           onChange={guardarDatosInput}
+          required
         />
 
         <label htmlFor="email">Email</label>
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           value={datosForm.email}
           onChange={guardarDatosInput}
+          required
+        />
+
+        <label htmlFor="emailRepetido">Repetir Email</label>
+        <input
+          type="email"
+          id="emailRepetido"
+          name="emailRepetido"
+          value={datosForm.emailRepetido}
+          onChange={guardarDatosInput}
+          required
         />
 
         <button type="submit">Enviar orden</button>

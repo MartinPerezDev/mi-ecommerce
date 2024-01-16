@@ -12,6 +12,7 @@ const Checkout = () => {
     nombre: "",
     telefono: "",
     email: "",
+    emailRepetido: ""
   });
   const [idOrden, setIdOrden] = useState(null);
   const { carrito, totalPrecio, borrarCarrito } = useContext(CartContext);
@@ -22,13 +23,18 @@ const Checkout = () => {
 
   const enviarOrder = (event) => {
     event.preventDefault();
-    const orden = {
-      comprador: { ...datosForm },
-      productos: [...carrito],
-      total: totalPrecio(),
-    };
-
-    subirOrden(orden);
+    if(datosForm.email === datosForm.emailRepetido){
+      const orden = {
+        comprador: { ...datosForm },
+        productos: [...carrito],
+        fecha: new Date(),
+        total: totalPrecio(),
+      };
+  
+      subirOrden(orden);
+    }else{
+      alert("Los emails deben ser iguales")
+    }
   };
 
   const subirOrden = (orden) => {
